@@ -1,7 +1,14 @@
 import "./assets/scss/bootstrap.scss";
+import { createBrowserRouter } from "react-router-dom";
+import { Home } from "./pages/Home";
 
-function App() {
-  return <div className="App">Hello world</div>;
-}
-
-export default App;
+export const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "*",
+    element: <>Not Found</>,
+  },
+]);
